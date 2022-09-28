@@ -37,8 +37,8 @@ namespace ej2
             {
                 try
                 {
-                    int op1 = int.Parse(op1TextBox.Text);
-                    int op2 = int.Parse(op2TextBox.Text);
+                    double op1 = double.Parse(op1TextBox.Text);
+                    double op2 = double.Parse(op2TextBox.Text);
 
                     switch (operadorTextBox.Text)
                     {
@@ -52,7 +52,7 @@ namespace ej2
                             resultadoTextBox.Text = (op1 * op2).ToString();
                             break;
                         case "/":
-                            resultadoTextBox.Text = (op1 / op2).ToString();
+                        resultadoTextBox.Text = Math.Round(op1 / op2, 1).ToString();
                             break;
                     }
                 }
